@@ -10,14 +10,19 @@ public  class Empleado extends Persona{
         this.idEmpleado = idEmpleado;
     }
 
-    
-    //puse abstractas porque todavia no se que va 
     public void  ingresarSistema(){
         System.out.println("ingresar sistema ");
     }
     public void seleccionarServicio(){
         System.out.println("ingresar sistema ");
     }
-    
+
+    public int getIdEmpleado() {
+        return idEmpleado;
+    }
+
+    public void setIdEmpleado(int idEmpleado) {
+        this.idEmpleado = idEmpleado;
+    }    
     
 }
