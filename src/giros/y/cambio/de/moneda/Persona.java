@@ -19,6 +19,7 @@ public class Persona {
         this.direccionResidencia = direccionResidencia;
     }
 
+
     public String getNombre() {
         return nombre;
     }
