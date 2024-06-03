@@ -8,7 +8,16 @@ public class Persona {
     private int numeroIdentificacion;
     private int numeroTelefono;
     private String correoElectronico;
-    private String DireccionResidencia;
+    private String direccionResidencia;
+
+    public Persona(String nombre, String apellido, int numeroIdentificacion, int numeroTelefono, String correoElectronico, String direccionResidencia) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.numeroIdentificacion = numeroIdentificacion;
+        this.numeroTelefono = numeroTelefono;
+        this.correoElectronico = correoElectronico;
+        this.direccionResidencia = direccionResidencia;
+    }
 
     public String getNombre() {
         return nombre;
@@ -51,11 +60,11 @@ public class Persona {
     }
 
     public String getDireccionResidencia() {
-        return DireccionResidencia;
+        return direccionResidencia;
     }
 
     public void setDireccionResidencia(String DireccionResidencia) {
-        this.DireccionResidencia = DireccionResidencia;
+        this.direccionResidencia = DireccionResidencia;
     }
     
 }
