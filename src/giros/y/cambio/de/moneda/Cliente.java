@@ -6,6 +6,13 @@ public class Cliente extends Persona{
     private String detallesEnvio;
     private String detallesTransaccion;
 
+    public Cliente(int idCliente, String detallesEnvio, String detallesTransaccion, String nombre, String apellido, int numeroIdentificacion, int numeroTelefono, String correoElectronico, String direccionResidencia) {
+        super(nombre, apellido, numeroIdentificacion, numeroTelefono, correoElectronico, direccionResidencia);
+        this.idCliente = idCliente;
+        this.detallesEnvio = detallesEnvio;
+        this.detallesTransaccion = detallesTransaccion;
+    }
+
     public void registrarCliente(){
         System.out.println("registrar cliente");
     }
