@@ -1,7 +1,7 @@
 
 package giros.y.cambio.de.moneda;
+import java.util.Scanner;
 
-// abstract porque alguno de sus metodos son abstractos
 public  class Empleado extends Persona{
     private int idEmpleado;
     
@@ -14,7 +14,16 @@ public  class Empleado extends Persona{
         System.out.println("ingresar sistema ");
     }
     public void seleccionarServicio(){
-        System.out.println("ingresar sistema ");
+        
+        System.out.println("Seleccione un servicio \n 1 para mensajeria , 2 para giros y cambio de moneda");
+        Scanner entrada = new Scanner(System.in);
+        int servicio;
+        servicio = entrada.nextInt();       
+        if (servicio == 1) {
+            System.out.println("Bienvenido al servicio de mensajeria");
+        }else {
+            System.out.println("Bienvenido al servicio de giros y cambio de moneda");
+        }
     }
 
     public int getIdEmpleado() {
@@ -24,5 +33,6 @@ public  class Empleado extends Persona{
     public void setIdEmpleado(int idEmpleado) {
         this.idEmpleado = idEmpleado;
     }    
+    
     
 }
