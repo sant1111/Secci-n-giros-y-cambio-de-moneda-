@@ -23,11 +23,22 @@ public  class Empleado extends Persona{
         if (servicio == 1) {
             System.out.println("Bienvenido al servicio de mensajeria");
         }else {
-            System.out.println("Bienvenido al servicio de giros y cambio de moneda");
-            GirosCambioMoneda g1 = new GirosCambioMoneda();
-            g1.registrarCliente();
-            
+            // do while para perguntar si necesita agregar otro cliente 
+            int continuar;
+    
+            do {                
+                System.out.println("Bienvenido al servicio de giros y cambio de moneda");
+                // se inicializa la clase GirosCambioMoneda y se usa el metodo registrarCliente
+                GirosCambioMoneda g1 = new GirosCambioMoneda();
+                g1.registrarCliente();
+                // se verifica si se debe añadir otro cliente
+                System.out.println("Ingrese: 1 para registrar otro cliente, 2 para salir");
+                continuar = entrada.nextInt();
+                
+            } while (continuar == 1);
+            System.out.println("Saliste");
         }
+        
     }
 
     public int getIdEmpleado() {
