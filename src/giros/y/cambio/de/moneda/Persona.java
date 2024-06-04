@@ -21,7 +21,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return this.nombre + this.apellido + this.numeroIdentificacion + this.numeroTelefono + this.correoElectronico + this.direccionResidencia  ; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        return this.nombre+ "\n" + this.apellido+ "\n" + this.numeroIdentificacion+ "\n" + this.numeroTelefono+ "\n" + this.correoElectronico+ "\n" + this.direccionResidencia  ; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
 
 

@@ -1,5 +1,6 @@
 
 package giros.y.cambio.de.moneda;
+import Logica.giros.y.cambio.moneda.GirosCambioMoneda;
 import java.util.Scanner;
 
 public  class Empleado extends Persona{
@@ -23,6 +24,9 @@ public  class Empleado extends Persona{
             System.out.println("Bienvenido al servicio de mensajeria");
         }else {
             System.out.println("Bienvenido al servicio de giros y cambio de moneda");
+            GirosCambioMoneda g1 = new GirosCambioMoneda();
+            g1.registrarCliente();
+            
         }
     }
 

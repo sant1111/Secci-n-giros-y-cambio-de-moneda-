@@ -25,6 +25,12 @@ public class Cliente extends Persona{
     public void eliminarCliente(){
         System.out.println("Eliminarcliente");
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "\n" + this.idCliente+ "\n" + this.detallesEnvio+ "\n" + this.detallesTransaccion; 
+    }
+    
     
     //getters y setters
     public int getIdCliente() {
