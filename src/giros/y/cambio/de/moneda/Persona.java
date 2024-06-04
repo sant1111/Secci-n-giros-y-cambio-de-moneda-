@@ -19,6 +19,11 @@ public class Persona {
         this.direccionResidencia = direccionResidencia;
     }
 
+    @Override
+    public String toString() {
+        return this.nombre + this.apellido + this.numeroIdentificacion + this.numeroTelefono + this.correoElectronico + this.direccionResidencia  ; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
 
     public String getNombre() {
         return nombre;
