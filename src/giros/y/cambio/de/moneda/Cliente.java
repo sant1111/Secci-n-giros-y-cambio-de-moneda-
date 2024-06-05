@@ -1,12 +1,15 @@
 
 package giros.y.cambio.de.moneda;
 
+import Logica.giros.y.cambio.moneda.Transaccion;
+import Logica.mensajeria.Envio;
+
 public class Cliente extends Persona{
     private int idCliente;
-    private String detallesEnvio;
-    private String detallesTransaccion;
+    private Envio detallesEnvio;
+    private Transaccion detallesTransaccion;
 
-    public Cliente(int idCliente, String detallesEnvio, String detallesTransaccion, String nombre, String apellido, int numeroIdentificacion, int numeroTelefono, String correoElectronico, String direccionResidencia) {
+    public Cliente(int idCliente, Envio detallesEnvio, Transaccion detallesTransaccion, String nombre, String apellido, int numeroIdentificacion, int numeroTelefono, String correoElectronico, String direccionResidencia) {
         super(nombre, apellido, numeroIdentificacion, numeroTelefono, correoElectronico, direccionResidencia);
         this.idCliente = idCliente;
         this.detallesEnvio = detallesEnvio;
@@ -41,19 +44,19 @@ public class Cliente extends Persona{
         this.idCliente = idCliente;
     }
 
-    public String getDetallesEnvio() {
+    public Envio getDetallesEnvio() {
         return detallesEnvio;
     }
 
-    public void setDetallesEnvio(String detallesEnvio) {
+    public void setDetallesEnvio(Envio detallesEnvio) {
         this.detallesEnvio = detallesEnvio;
     }
 
-    public String getDetallesTransaccion() {
+    public Transaccion getDetallesTransaccion() {
         return detallesTransaccion;
     }
 
-    public void setDetallesTransaccion(String detallesTransaccion) {
+    public void setDetallesTransaccion(Transaccion detallesTransaccion) {
         this.detallesTransaccion = detallesTransaccion;
     }
     

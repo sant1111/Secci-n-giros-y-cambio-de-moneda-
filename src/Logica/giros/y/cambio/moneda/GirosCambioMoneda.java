@@ -1,4 +1,5 @@
 package Logica.giros.y.cambio.moneda;
+import Logica.mensajeria.Envio;
 import giros.y.cambio.de.moneda.Cliente;// se importa la clase cliente
 import java.util.ArrayList; // se importa la ArrayLIsta 
 import java.util.Scanner;
@@ -25,13 +26,15 @@ public class GirosCambioMoneda {
         int numeroTelefono = entrada.nextInt();
         System.out.println("ingrese el correo electronico");
         String correoElectronico = entrada.next();
-        System.out.println("ingrese los detalles del envio");
-        String detallesEnvio = entrada.next();
-        System.out.println("ingrese los detalles de la transaccion");
-         String detallesTransaccion = entrada.next();
-        Cliente c = new Cliente(12, detallesEnvio, detallesTransaccion, nombre, apellido, numeroIdentificacion, numeroTelefono, correoElectronico, direccionResidencia);
-         
-        System.out.println(c);
+        Envio detallesEnvio = new Envio();
+        Transaccion detallesTransaccion = new Transaccion();
+      // se añade el objeto de tipo cliente al arrayList Clientes dia
+        clientesDia.add(new Cliente(12, detallesEnvio, detallesTransaccion, nombre, apellido, numeroIdentificacion, numeroTelefono, correoElectronico, direccionResidencia));
         
+    }
+    public void info(){
+        System.out.println("tamaño del ArrayList");
+        System.out.println(clientesDia.size());
+        System.out.println(clientesDia);//la clase ArrayList ya tinee sobreescrito el metodo toString
     }
 }
