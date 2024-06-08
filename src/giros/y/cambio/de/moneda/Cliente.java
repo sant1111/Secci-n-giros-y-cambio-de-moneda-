@@ -8,7 +8,11 @@ public class Cliente extends Persona{
     private int idCliente;
     private Envio detallesEnvio;
     private Transaccion detallesTransaccion;
-
+    
+    public Cliente(){
+        
+    }
+    
     public Cliente(int idCliente, Envio detallesEnvio, Transaccion detallesTransaccion, String nombre, String apellido, int numeroIdentificacion, int numeroTelefono, String correoElectronico, String direccionResidencia) {
         super(nombre, apellido, numeroIdentificacion, numeroTelefono, correoElectronico, direccionResidencia);
         this.idCliente = idCliente;

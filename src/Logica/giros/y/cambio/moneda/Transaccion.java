@@ -7,6 +7,9 @@ public class Transaccion {
     private Conversion conversionMoneda;
     private Entrega detallesEntrega;
 
+    public Transaccion(){
+        
+    }
     public Transaccion(int idTransaccion, Conversion conversionMoneda, Entrega detallesEntrega) {
         this.idTransaccion = idTransaccion;
         this.conversionMoneda = conversionMoneda;

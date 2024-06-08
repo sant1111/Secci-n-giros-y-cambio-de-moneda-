@@ -8,8 +8,11 @@ public class Persona {
     private int numeroIdentificacion;
     private int numeroTelefono;
     private String correoElectronico;
-    private String direccionResidencia;
+    private String direccionResidencia;// creo que se debe quitar
 
+    public Persona (){
+        
+    }
     public Persona(String nombre, String apellido, int numeroIdentificacion, int numeroTelefono, String correoElectronico, String direccionResidencia) {
         this.nombre = nombre;
         this.apellido = apellido;
