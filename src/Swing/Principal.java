@@ -26,7 +26,7 @@ public class Principal extends javax.swing.JFrame {
         contenidoPrincipal.add(r);
         contenidoPrincipal.add(m);
         contenidoPrincipal.add(g); 
-        
+        r.setSize(850,550);
 
     }
 
@@ -39,6 +39,7 @@ public class Principal extends javax.swing.JFrame {
         paginaMensajeria = new javax.swing.JButton();
         contenidoPrincipal = new javax.swing.JPanel();
         paginaRegistrarCliente = new javax.swing.JButton();
+        btnCerrarVentana = new javax.swing.JButton();
         MenuPrincipal = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,7 +52,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(paginaGirosCambioMoneda);
-        paginaGirosCambioMoneda.setBounds(290, 10, 230, 24);
+        paginaGirosCambioMoneda.setBounds(370, 10, 230, 24);
 
         paginaMensajeria.setText("Mensajeria");
         paginaMensajeria.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +61,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(paginaMensajeria);
-        paginaMensajeria.setBounds(130, 10, 150, 24);
+        paginaMensajeria.setBounds(210, 10, 150, 24);
 
         contenidoPrincipal.setBackground(new java.awt.Color(0, 51, 51));
 
@@ -85,7 +86,16 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(paginaRegistrarCliente);
-        paginaRegistrarCliente.setBounds(10, 10, 110, 24);
+        paginaRegistrarCliente.setBounds(10, 10, 190, 24);
+
+        btnCerrarVentana.setText("Cerrar");
+        btnCerrarVentana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarVentanaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCerrarVentana);
+        btnCerrarVentana.setBounds(630, 10, 100, 24);
         setJMenuBar(MenuPrincipal);
 
         pack();
@@ -103,6 +113,12 @@ public class Principal extends javax.swing.JFrame {
         r.show(true);
     }//GEN-LAST:event_paginaRegistrarClienteActionPerformed
 
+    private void btnCerrarVentanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarVentanaActionPerformed
+       m.show(false);
+       g.show(false);
+       r.show(false);
+    }//GEN-LAST:event_btnCerrarVentanaActionPerformed
+
     
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -114,6 +130,7 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar MenuPrincipal;
+    private javax.swing.JButton btnCerrarVentana;
     private javax.swing.JPanel contenidoPrincipal;
     private javax.swing.JButton paginaGirosCambioMoneda;
     private javax.swing.JButton paginaMensajeria;

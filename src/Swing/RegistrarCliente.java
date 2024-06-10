@@ -7,6 +7,7 @@ package Swing;
 import giros.y.cambio.de.moneda.Cliente;
 import giros.y.cambio.de.moneda.Persona;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -17,6 +18,8 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
 
     DefaultTableModel  modelo = new DefaultTableModel();//se inicializa la tabla 
     ArrayList<Persona> listaClientes = new ArrayList<Persona>(); //se inicializa la lista de objetos persona
+    private int filaSeleccionada ;
+    
     public RegistrarCliente() {
         initComponents();
         this.setTitle("Registro de clientes");
@@ -89,57 +92,57 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Registro de clientes");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 180, -1));
 
         jLabel2.setText("Nombre");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, -1, -1));
 
         jLabel3.setText("Numero de telefono");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, -1, -1));
 
         jLabel4.setText("Apellido");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
 
         jLabel5.setText("Numero de identificación");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, -1, -1));
 
         jLabel6.setText("Correo electronico ");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, -1, -1));
 
         txtCorreoElectronicoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCorreoElectronicoClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(txtCorreoElectronicoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 160, -1));
+        getContentPane().add(txtCorreoElectronicoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 130, 160, -1));
 
         txtNumeroIdentificacionCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNumeroIdentificacionClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(txtNumeroIdentificacionCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, 160, -1));
+        getContentPane().add(txtNumeroIdentificacionCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, 160, -1));
 
         txtNumeroTelefonoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNumeroTelefonoClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(txtNumeroTelefonoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 160, -1));
+        getContentPane().add(txtNumeroTelefonoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 160, -1));
 
         txtNombreCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombreClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(txtNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 160, -1));
+        getContentPane().add(txtNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 160, -1));
 
         txtApellidoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtApellidoClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(txtApellidoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 160, -1));
+        getContentPane().add(txtApellidoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 160, -1));
 
         btnBorrarCliente.setText("Borrar");
         btnBorrarCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +150,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
                 btnBorrarClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBorrarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, -1, -1));
+        getContentPane().add(btnBorrarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 120, -1));
 
         btnEliminarTablaClientes.setText("Eliminar");
         btnEliminarTablaClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +158,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
                 btnEliminarTablaClientesActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEliminarTablaClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 420, 70, -1));
+        getContentPane().add(btnEliminarTablaClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 420, 120, -1));
 
         tblRegistroClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -168,9 +171,14 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblRegistroClientes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblRegistroClientesMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblRegistroClientes);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 580, 190));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 710, 190));
 
         btnAgregarCliente.setText("Agregar");
         btnAgregarCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -178,7 +186,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
                 btnAgregarClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAgregarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, -1, -1));
+        getContentPane().add(btnAgregarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 120, -1));
 
         btnEditarTablaRegistroClientes.setText("Editar");
         btnEditarTablaRegistroClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +194,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
                 btnEditarTablaRegistroClientesActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEditarTablaRegistroClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 60, -1));
+        getContentPane().add(btnEditarTablaRegistroClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, 110, -1));
 
         btnActualizarTablaClientes.setText("Actualizar");
         btnActualizarTablaClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -194,7 +202,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
                 btnActualizarTablaClientesActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarTablaClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, 70, -1));
+        getContentPane().add(btnActualizarTablaClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, 120, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -224,7 +232,14 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnBorrarClienteActionPerformed
 
     private void btnEliminarTablaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarTablaClientesActionPerformed
-        // TODO add your handling code here:
+       
+       //mensaje de error (getSelectectRow devuelve un -1) por si el usuario persiona el boton eliminar sin seleccionar una fila de la tabla 
+       if ( tblRegistroClientes.getSelectedRow() == -1){
+           JOptionPane.showMessageDialog(null, "no ha seleccionado ningun registro", "ERROR AL ELIMINAR REGISTRO", JOptionPane.ERROR_MESSAGE);
+       }else {
+            modelo.removeRow(tblRegistroClientes.getSelectedRow());
+            //refrescarTabla();
+       }
     }//GEN-LAST:event_btnEliminarTablaClientesActionPerformed
 
     private void btnAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarClienteActionPerformed
@@ -239,17 +254,39 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
        refrescarTabla();
        
        //visibilidad botones 
-      btnEditarTablaRegistroClientes.setEnabled(false);
+      btnEditarTablaRegistroClientes.setEnabled(true);
+      btnEliminarTablaClientes.setEnabled(true);
+      btnActualizarTablaClientes.setEnabled(true);
        
     }//GEN-LAST:event_btnAgregarClienteActionPerformed
-
+    // se coloca la informacion de la tabla en el formulario de registro 
     private void btnEditarTablaRegistroClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarTablaRegistroClientesActionPerformed
-        // TODO add your handling code here:
+        if ( tblRegistroClientes.getSelectedRow() == -1){
+           JOptionPane.showMessageDialog(null, "no ha seleccionado ningun registro", "ERROR AL EDIAR REGISTRO", JOptionPane.WARNING_MESSAGE);
+       }else {
+            filaSeleccionada = tblRegistroClientes.getSelectedRow();
+            txtNombreCliente.setText(modelo.getValueAt(tblRegistroClientes.getSelectedRow(), 0).toString());
+            txtApellidoCliente.setText(modelo.getValueAt(tblRegistroClientes.getSelectedRow(),1).toString());
+            txtNumeroIdentificacionCliente.setText(modelo.getValueAt(tblRegistroClientes.getSelectedRow(), 2).toString());
+            txtNumeroTelefonoCliente.setText(modelo.getValueAt(tblRegistroClientes.getSelectedRow(),3).toString());
+            txtCorreoElectronicoCliente.setText(modelo.getValueAt(tblRegistroClientes.getSelectedRow(),4).toString());
+            // refrescarTabla();
+       }
+        
+       
     }//GEN-LAST:event_btnEditarTablaRegistroClientesActionPerformed
 
     private void btnActualizarTablaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarTablaClientesActionPerformed
-        // TODO add your handling code here:
+       modelo.setValueAt(txtNombreCliente.getText().trim(), filaSeleccionada, 0);
+       modelo.setValueAt(txtApellidoCliente.getText().trim(), filaSeleccionada, 1);
+       modelo.setValueAt(txtNumeroIdentificacionCliente.getText().trim(), filaSeleccionada, 2);
+       modelo.setValueAt(txtNumeroTelefonoCliente.getText().trim(), filaSeleccionada, 3);
+       modelo.setValueAt(txtCorreoElectronicoCliente.getText().trim(), filaSeleccionada, 4);
     }//GEN-LAST:event_btnActualizarTablaClientesActionPerformed
+    //evento que para poder editar 
+    private void tblRegistroClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblRegistroClientesMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tblRegistroClientesMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
