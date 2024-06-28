@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
+
 package Swing;
 
 import giros.y.cambio.de.moneda.Cliente;
@@ -10,10 +7,6 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author PC
- */
 public class RegistrarCliente extends javax.swing.JInternalFrame {
 
     DefaultTableModel  modelo = new DefaultTableModel();//se inicializa la tabla 
@@ -30,7 +23,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
         modelo.addColumn("Numero Telefono");
         modelo.addColumn("Correo Electronico");
         
-        refrescarTabla();
+        //refrescarTabla();
         //visibilidad de los botones
         btnAgregarCliente.setEnabled(true);//setEnable para la visibilidad de los botones
         btnBorrarCliente.setEnabled(true);
@@ -47,7 +40,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
         txtNumeroTelefonoCliente.setText("");
         txtCorreoElectronicoCliente.setText("");
     }
-    public void refrescarTabla(){
+   /*public void refrescarTabla(){
         //borrar todos los elementos del modelo 
         while(modelo.getRowCount()>0){
             modelo.removeRow(0);
@@ -64,7 +57,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
             modelo.addRow(a);// añadimos al modelo como una fila 
         }
         tblRegistroClientes.setModel(modelo);//se le añade el modelo a la tabla de clientes
-    }
+    }*/
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -88,6 +81,8 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
         btnAgregarCliente = new javax.swing.JButton();
         btnEditarTablaRegistroClientes = new javax.swing.JButton();
         btnActualizarTablaClientes = new javax.swing.JButton();
+        btnCrearArchivoClientes = new javax.swing.JButton();
+        btnActualizarTablaTablaClientes = new javax.swing.JButton();
 
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -158,7 +153,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
                 btnEliminarTablaClientesActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEliminarTablaClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 420, 120, -1));
+        getContentPane().add(btnEliminarTablaClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 420, 120, -1));
 
         tblRegistroClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -186,7 +181,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
                 btnAgregarClienteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAgregarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 120, -1));
+        getContentPane().add(btnAgregarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 120, -1));
 
         btnEditarTablaRegistroClientes.setText("Editar");
         btnEditarTablaRegistroClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -194,7 +189,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
                 btnEditarTablaRegistroClientesActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEditarTablaRegistroClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, 110, -1));
+        getContentPane().add(btnEditarTablaRegistroClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 110, -1));
 
         btnActualizarTablaClientes.setText("Actualizar");
         btnActualizarTablaClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -202,7 +197,23 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
                 btnActualizarTablaClientesActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizarTablaClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, 120, -1));
+        getContentPane().add(btnActualizarTablaClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, 120, -1));
+
+        btnCrearArchivoClientes.setText("Crear Archivo Clientes");
+        btnCrearArchivoClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearArchivoClientesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCrearArchivoClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 190, -1));
+
+        btnActualizarTablaTablaClientes.setText("Actualizar tabla");
+        btnActualizarTablaTablaClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizarTablaTablaClientesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnActualizarTablaTablaClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 170, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -232,18 +243,31 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnBorrarClienteActionPerformed
 
     private void btnEliminarTablaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarTablaClientesActionPerformed
-       
+       /*
        //mensaje de error (getSelectectRow devuelve un -1) por si el usuario persiona el boton eliminar sin seleccionar una fila de la tabla 
        if ( tblRegistroClientes.getSelectedRow() == -1){
            JOptionPane.showMessageDialog(null, "no ha seleccionado ningun registro", "ERROR AL ELIMINAR REGISTRO", JOptionPane.ERROR_MESSAGE);
        }else {
             modelo.removeRow(tblRegistroClientes.getSelectedRow());
             //refrescarTabla();
-       }
+       }*/
     }//GEN-LAST:event_btnEliminarTablaClientesActionPerformed
 
     private void btnAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarClienteActionPerformed
-       Persona p = new Persona();
+      // agregar al archivo "clientes.txt"
+       Cliente c1 = new Cliente();
+            //se le asigna el valor a los atributos 
+            
+       c1.setNombre(txtNombreCliente.getText());
+       c1.setApellido(txtApellidoCliente.getText());
+       c1.setNumeroIdentificacion(Integer.parseInt(txtNumeroIdentificacionCliente.getText()));
+       c1.setNumeroTelefono(Integer.parseInt(txtNumeroTelefonoCliente.getText()));
+       c1.setCorreoElectronico(txtCorreoElectronicoCliente.getText   ());
+       c1.setDireccionResidencia("calle 00");
+              // se agregan al txt
+       c1.agregarRegistroCliente();
+      //--------------------------------
+      /* Persona p = new Persona();
        p.setNombre(txtNombreCliente.getText());// se asigna al objeto persona (lo que se obtiene del txt)
        p.setApellido(txtApellidoCliente.getText());
        p.setNumeroIdentificacion(Integer.parseInt(txtNumeroIdentificacionCliente.getText()));//se hace casteo para convertir a entero
@@ -252,7 +276,7 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
        //se añade el objeto persona al arrayList
        listaClientes.add(p);
        refrescarTabla();
-       
+       */
        //visibilidad botones 
       btnEditarTablaRegistroClientes.setEnabled(true);
       btnEliminarTablaClientes.setEnabled(true);
@@ -288,11 +312,23 @@ public class RegistrarCliente extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tblRegistroClientesMouseClicked
 
+    private void btnCrearArchivoClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearArchivoClientesActionPerformed
+       Cliente c1 = new Cliente();
+       c1.crearArchivoClientes();
+    }//GEN-LAST:event_btnCrearArchivoClientesActionPerformed
+
+    private void btnActualizarTablaTablaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarTablaTablaClientesActionPerformed
+        Cliente c1 = new Cliente();
+        c1.mostrarClientes(tblRegistroClientes);
+    }//GEN-LAST:event_btnActualizarTablaTablaClientesActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizarTablaClientes;
+    private javax.swing.JButton btnActualizarTablaTablaClientes;
     private javax.swing.JButton btnAgregarCliente;
     private javax.swing.JButton btnBorrarCliente;
+    private javax.swing.JButton btnCrearArchivoClientes;
     private javax.swing.JButton btnEditarTablaRegistroClientes;
     private javax.swing.JButton btnEliminarTablaClientes;
     private javax.swing.JLabel jLabel1;

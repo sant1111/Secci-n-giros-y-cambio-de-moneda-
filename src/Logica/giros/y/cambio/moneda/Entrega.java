@@ -15,7 +15,7 @@ public class Entrega {
         this.numeroTelefonoDestinatario = numeroTelefonoDestinatario;
         this.estadoEntrega = estadoEntrega;
     }
-
+    //getters y setters 
     public String getNombreDestinatario() {
         return nombreDestinatario;
     }

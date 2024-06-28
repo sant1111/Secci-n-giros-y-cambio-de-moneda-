@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Swing;
 
 import java.awt.Toolkit;
 import javax.swing.JFrame;
 
-/**
- *
- * @author PC
- */
+
 public class Principal extends javax.swing.JFrame {
 
     RegistrarCliente r = new RegistrarCliente();
@@ -102,21 +96,21 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void paginaGirosCambioMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paginaGirosCambioMonedaActionPerformed
-     m.show(true);  
+     m.setVisible(true);  
     }//GEN-LAST:event_paginaGirosCambioMonedaActionPerformed
 
     private void paginaMensajeriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paginaMensajeriaActionPerformed
-        g.show(true);
+        g.setVisible(true);
     }//GEN-LAST:event_paginaMensajeriaActionPerformed
 
     private void paginaRegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paginaRegistrarClienteActionPerformed
-        r.show(true);
+        r.setVisible(true);
     }//GEN-LAST:event_paginaRegistrarClienteActionPerformed
 
     private void btnCerrarVentanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarVentanaActionPerformed
-       m.show(false);
-       g.show(false);
-       r.show(false);
+       m.setVisible(false);
+       g.setVisible(false);
+       r.setVisible(false);
     }//GEN-LAST:event_btnCerrarVentanaActionPerformed
 
     

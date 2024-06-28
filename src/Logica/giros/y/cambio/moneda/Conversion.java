@@ -9,7 +9,7 @@ public class Conversion {
         this.cantidad = cantidad;
         this.resultado = resultado;
     }
-
+ // getters y setters 
     public double getCantidad() {
         return cantidad;
     }
