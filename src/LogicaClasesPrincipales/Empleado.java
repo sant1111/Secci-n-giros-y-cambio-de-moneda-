@@ -1,5 +1,5 @@
 
-package giros.y.cambio.de.moneda;
+package LogicaClasesPrincipales;
 import Logica.giros.y.cambio.moneda.GirosCambioMoneda;
 import java.util.Scanner;
 

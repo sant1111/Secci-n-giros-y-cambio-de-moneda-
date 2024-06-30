@@ -1,6 +1,6 @@
 
 package Logica.mensajeria;
-import giros.y.cambio.de.moneda.Cliente;
+import LogicaClasesPrincipales.Cliente;
 import java.util.ArrayList;
 
 public class Mensajeria {

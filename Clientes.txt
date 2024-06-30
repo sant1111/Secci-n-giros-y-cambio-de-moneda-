@@ -1,9 +1,2 @@
-1,santiago,dfsdf,122132,35234,correo,calle 00
-1,santiago,dfsdf,122132,35234,correo,calle 00
-1,santiago,dfsdf,122132,35234,correo,calle 00
-1,santiago,dfsdf,122132,35234,correo,calle 00
-1,santiago,dfsdf,122132,35234,correo,calle 00
-1,santiago,dfsdf,122132,35234,correo,calle 00
-1,dsfadf,dfsdf,122132,35234,correo,calle 00
-1,qwe,qwe,123,123,sda,calle 00
-1,SDFA,DF,12,21,SDSFD,calle 00
+
+1,das,as,123,132,sdfsd,calle 00

@@ -1,5 +1,5 @@
 
-package giros.y.cambio.de.moneda;
+package LogicaClasesPrincipales;
 
 public class Persona {
     

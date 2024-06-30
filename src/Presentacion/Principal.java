@@ -1,5 +1,5 @@
 
-package Swing;
+package Presentacion;
 
 import java.awt.Toolkit;
 import javax.swing.JFrame;
@@ -21,6 +21,8 @@ public class Principal extends javax.swing.JFrame {
         contenidoPrincipal.add(m);
         contenidoPrincipal.add(g); 
         r.setSize(850,550);
+        m.setSize(850,550);
+        g.setSize(850,550);
 
     }
 
@@ -96,11 +98,11 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void paginaGirosCambioMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paginaGirosCambioMonedaActionPerformed
-     m.setVisible(true);  
+     g.setVisible(true);  
     }//GEN-LAST:event_paginaGirosCambioMonedaActionPerformed
 
     private void paginaMensajeriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paginaMensajeriaActionPerformed
-        g.setVisible(true);
+        m.setVisible(true);
     }//GEN-LAST:event_paginaMensajeriaActionPerformed
 
     private void paginaRegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paginaRegistrarClienteActionPerformed
